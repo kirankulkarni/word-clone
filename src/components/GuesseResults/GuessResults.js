@@ -8,11 +8,8 @@ function GuesseResults({ accessGuesses }) {
 
   return (
     <div className='guess-results'>
-      {range(1, NUM_OF_GUESSES_ALLOWED).map((guessNo) => {
-        let guess = '';
-        if (guessNo <= guesses.length) {
-          guess = guesses[guessNo - 1];
-        }
+      {range(NUM_OF_GUESSES_ALLOWED).map((guessNo) => {
+        let guess = guesses[guessNo];
         return (
           <p className='guess' key={guessNo}>
             <Guess guessWord={guess} />

@@ -13,20 +13,19 @@ function GuessInput({ submitGuess, gameState }) {
       }}
     >
       <label htmlFor='guess-input'>Enter text:</label>
-      {gameState === 'running' && (
-        <input
-          id='guess-input'
-          type='text'
-          maxLength={5}
-          minLength={5}
-          pattern='[A-Za-z]{5}'
-          title='Enter 5 letter word'
-          value={guessWord}
-          onChange={(event) =>
-            setGuessWord(event.target.value.toUpperCase())
-          }
-        ></input>
-      )}
+      <input
+        id='guess-input'
+        type='text'
+        disabled={gameState != 'running'}
+        maxLength={5}
+        minLength={5}
+        pattern='[A-Za-z]{5}'
+        title='Enter 5 letter word'
+        value={guessWord}
+        onChange={(event) =>
+          setGuessWord(event.target.value.toUpperCase())
+        }
+      ></input>
     </form>
   );
 }

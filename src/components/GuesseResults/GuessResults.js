@@ -9,7 +9,9 @@ function GuesseResults({ accessGuesses }) {
   return (
     <div className='guess-results'>
       {range(NUM_OF_GUESSES_ALLOWED).map((guessNo) => {
-        return <Guess key={guessNo} guessWord={guesses[guessNo]} />;
+        return (
+          <Guess key={guessNo} guessWordDetails={guesses[guessNo]} />
+        );
       })}
     </div>
   );

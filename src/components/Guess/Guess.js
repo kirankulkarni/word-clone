@@ -1,14 +1,24 @@
 import React from 'react';
 import { range } from '../../utils';
 
-function Guess({ guessWord }) {
+function Guess({ guessWordDetails }) {
   return (
     <p className='guess'>
-      {range(5).map((num) => (
-        <span className='cell' key={num}>
-          {guessWord ? guessWord[num] : undefined}
-        </span>
-      ))}
+      {range(5).map((num) => {
+        const status = guessWordDetails
+          ? guessWordDetails[num].status
+          : undefined;
+        return (
+          <span
+            className={status ? `cell ${status}` : 'cell'}
+            key={num}
+          >
+            {guessWordDetails
+              ? guessWordDetails[num].letter
+              : undefined}
+          </span>
+        );
+      })}
     </p>
   );
 }

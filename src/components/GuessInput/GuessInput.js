@@ -13,7 +13,7 @@ function GuessInput({ submitGuess, gameState }) {
       }}
     >
       <label htmlFor='guess-input'>Enter text:</label>
-      {gameState === 'running' ? (
+      {gameState === 'running' && (
         <input
           id='guess-input'
           type='text'
@@ -26,7 +26,7 @@ function GuessInput({ submitGuess, gameState }) {
             setGuessWord(event.target.value.toUpperCase())
           }
         ></input>
-      ) : undefined}
+      )}
     </form>
   );
 }

@@ -230,3 +230,17 @@ h1 {
     transform: translateY(0%);
   }
 }
+
+button.restart {
+  background-color: #d4b62e; /* Set the button background color */
+  border: none; /* Remove button borders */
+  color: white; /* Set the button text color */
+  padding: 10px 20px; /* Add padding to the button */
+  text-align: center; /* Center the button text */
+  text-decoration: none; /* Remove underline from the button */
+  display: inline-block; /* Display the button as an inline-block element */
+  font-size: 16px; /* Set the button font size */
+  margin: 10px 0; /* Add margin to the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border-radius: 5px; /* Add rounded corners to the button */
+}

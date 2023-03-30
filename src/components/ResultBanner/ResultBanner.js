@@ -7,8 +7,13 @@ function ResultBanner({ gameState, totalGuesses, answer }) {
       {gameState === 'won' && (
         <div className='happy banner'>
           <p>
-            <strong>Congratulations!</strong> Got it in
-            <strong>{totalGuesses} guesses</strong>.
+            <strong>Congratulations!</strong> Got it in{' '}
+            <strong>
+              {totalGuesses == 1
+                ? '1 guess'
+                : `${totalGuesses} guesses`}
+            </strong>
+            .
           </p>
         </div>
       )}

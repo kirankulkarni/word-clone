@@ -9,7 +9,7 @@ function ResultBanner({ gameState, totalGuesses, answer }) {
           <p>
             <strong>Congratulations!</strong> Got it in{' '}
             <strong>
-              {totalGuesses == 1
+              {totalGuesses === 1
                 ? '1 guess'
                 : `${totalGuesses} guesses`}
             </strong>

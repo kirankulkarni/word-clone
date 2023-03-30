@@ -16,7 +16,7 @@ function GuessInput({ submitGuess, gameState }) {
       <input
         id='guess-input'
         type='text'
-        disabled={gameState != 'running'}
+        disabled={gameState !== 'running'}
         maxLength={5}
         minLength={5}
         pattern='[A-Za-z]{5}'

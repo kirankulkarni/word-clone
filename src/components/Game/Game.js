@@ -45,7 +45,7 @@ function Game() {
   return (
     <>
       {/*Put a game here!*/}
-      {gameState != 'running' && <GameReset resetFn={resetGame} />}
+      {gameState !== 'running' && <GameReset resetFn={resetGame} />}
       <GuessResults accessGuesses={accessGuesses} />
 
       <GuessInput
